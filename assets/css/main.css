@@ -1495,6 +1495,20 @@ h4 {
   padding: 3rem 6rem 4rem 6rem;
 }
 
+.main-slider-item {
+  filter: drop-shadow(0 0 0.75rem rgb(139, 139, 139));
+}
+
+.main-slider-item img {
+  width: 100% !important;
+  display: block;
+  width: auto;
+}
+
+.status {
+  text-align: center;
+}
+
 @media (max-width: 1399px) {
   .paints {
     display: none;
@@ -2096,8 +2110,4 @@ h4 {
     padding: 3rem 3rem;
     width: 25rem;
   }
-}
-
-.main-slider-item {
-  filter: drop-shadow(0 0 0.75rem rgb(139, 139, 139));
 }
