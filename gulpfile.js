@@ -7,7 +7,7 @@ const browsersync = require("browser-sync");
 const dist = "./dist/";
 
 
-// const dist = "C:/laragon/www/test-gulp";
+// const dist = "C:/openserver/domains/localhost";
 
 
 gulp.task("copy-html", () => {

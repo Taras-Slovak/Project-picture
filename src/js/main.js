@@ -4,6 +4,7 @@ import forms from './modules/forms';
 import mask from './modules/mask';
 import checkTesxtInputs from './modules/checkTesxtInputs';
 import showMoreStyles from './modules/showMoreStyles';
+import calc from './modules/calc';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
@@ -16,4 +17,5 @@ window.addEventListener('DOMContentLoaded', () => {
     checkTesxtInputs('[name="name"]');
     checkTesxtInputs('[name="message"]');
     showMoreStyles('.button-styles','#styles .row');
+    calc('#size','#material','#options','.promocode','.calc-price');
 });

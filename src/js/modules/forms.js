@@ -1,9 +1,12 @@
-import { postData } from "./services/requests";
+import {
+    postData
+} from "./services/requests";
 
 const forms = () => {
     const form = document.querySelectorAll('form'),
         inputs = document.querySelectorAll('input'),
-        upload = document.querySelectorAll('[name = "upload"]');
+        upload = document.querySelectorAll('[name = "upload"]'),
+        calcPrice = document.querySelector('.calc-price');
 
     const message = {
         loading: 'Loading...',
@@ -43,8 +46,7 @@ const forms = () => {
     form.forEach(item => {
         item.addEventListener('submit', (e) => {
             e.preventDefault();
-
-
+            
             let statusMessage = document.createElement('div');
             statusMessage.classList.add('status');
             item.parentNode.appendChild(statusMessage);
@@ -66,6 +68,7 @@ const forms = () => {
             const formData = new FormData(item);
             let api;
             item.closest('.popup-design') || item.classList.contains('calc_form') ? api = path.designer : api = path.question;
+            formData.append('calc-price', calcPrice.textContent);
             console.log(api);
 
             postData(api, formData)
