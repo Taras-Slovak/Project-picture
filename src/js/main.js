@@ -9,21 +9,23 @@ import filter from './modules/filter';
 import pictureSize from './modules/pictureSize';
 import accordion from './modules/accordion';
 import burger from './modules/burger';
+import scrolling from './modules/scrolling';
 
 window.addEventListener('DOMContentLoaded', () => {
     'use strict';
-    
+
     modals();
-    sliders('.feedback-slider-item','horizontal','.main-prev-btn','.main-next-btn');
-    sliders('.main-slider-item','vertical');
+    sliders('.feedback-slider-item', 'horizontal', '.main-prev-btn', '.main-next-btn');
+    sliders('.main-slider-item', 'vertical');
     forms();
     mask('[name="phone"]');
     checkTesxtInputs('[name="name"]');
     checkTesxtInputs('[name="message"]');
-    showMoreStyles('.button-styles','#styles .row');
-    calc('#size','#material','#options','.promocode','.calc-price');
+    showMoreStyles('.button-styles', '#styles .row');
+    calc('#size', '#material', '#options', '.promocode', '.calc-price');
     filter();
     pictureSize('.sizes-block');
     accordion('.accordion-heading');
-    burger('.burger-menu','.burger');
+    burger('.burger-menu', '.burger');
+    scrolling('.pageup');
 });
